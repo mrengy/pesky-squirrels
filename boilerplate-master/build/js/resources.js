@@ -58,5 +58,10 @@ game.resources = [
         "name": "wheelie_right",
         "type": "image",
         "src": "data/img/sprite/wheelie_right.png"
+    },
+    {
+        "name": "area01",
+        "type": "tmx",
+        "src": "data/map/area01.tmx"
     }
 ];
