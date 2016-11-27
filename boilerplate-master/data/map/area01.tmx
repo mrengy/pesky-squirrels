@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32" backgroundcolor="#7fedff" nextobjectid="4">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32" backgroundcolor="#7fedff" nextobjectid="12">
  <tileset firstgid="1" name="area01_level_tiles" tilewidth="32" tileheight="32" tilecount="140" columns="20">
   <image source="../img/map/area01_level_tiles.png" width="640" height="241"/>
  </tileset>
@@ -23,6 +23,9 @@
   </object>
  </objectgroup>
  <objectgroup name="collision">
-  <object id="3" name="collision" x="130" y="226" width="30" height="61"/>
+  <object id="7" x="2" y="37" width="60" height="341"/>
+  <object id="8" x="65" y="324" width="125" height="57"/>
+  <object id="9" x="1" y="383" width="30" height="48"/>
+  <object id="10" x="29" y="416" width="609" height="64"/>
  </objectgroup>
 </map>
