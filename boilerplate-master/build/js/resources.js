@@ -63,5 +63,10 @@ game.resources = [
         "name": "area01",
         "type": "tmx",
         "src": "data/map/area01.tmx"
+    },
+    {
+        "name": "area02",
+        "type": "tmx",
+        "src": "data/map/area02.tmx"
     }
 ];
