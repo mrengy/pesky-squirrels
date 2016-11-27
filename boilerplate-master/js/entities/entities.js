@@ -25,14 +25,56 @@ game.PlayerEntity = me.Entity.extend({
         // define a standing animation (using the first frame)
         this.renderable.addAnimation("stand", [0]);
 
-        //set the standing animation as default
+        // set the standing animation as default
         this.renderable.setCurrentAnimation("stand");
     },
 
     /**
-     * update the entity
+     * update the player position
      */
     update : function (dt) {
+        if (me.input.isKeyPressed('left')) {
+            // flip the sprite on horizontal axis
+            this.renderable.flipX(true);
+
+            // update the entity velocity
+            this.body.vel.x -= this.body.accel.x * me.timer.tick;
+
+            // change to the walking animation
+            if (!this.renderable.isCurrentAnimation("walk")) {
+                this.renderable.setCurrentAnimation("walk");
+            }
+        }
+        else if (me.input.isKeyPressed('right')) {
+            // unflip the sprite
+            this.renderable.flipX(false);
+
+            // update the entity velocity
+            this.body.vel.x += this.body.accel.x * me.timer.tick;
+
+            // change to the walking animation
+            if (!this.renderable.isCurrentAnimation("walk")) {
+                this.renderable.isCurrentAnimation("walk");
+            }
+        }
+        else {
+            this.body.vel.x = 0;
+
+            // change to the standing animation
+            this.renderable.setCurrentAnimation("stand");
+        }
+
+        if (me.input.isKeyPressed('jump')) {
+            // make sure we are not already jumping or falling
+            if (!this.body.jumping && !this.body.falling) {
+                // set current velocity to the maximum defined value
+                // gravity will then do the rest
+                this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
+
+                //set the jumping flag
+                this.body.jumping = true;
+            }
+        }
 
         // apply physics to the body (this moves the entity)
         this.body.update(dt);
