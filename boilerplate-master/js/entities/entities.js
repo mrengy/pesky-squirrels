@@ -156,6 +156,9 @@ game.CoinEntity = me.CollectableEntity.extend({
     onCollision : function (response, other) {
         //do something when collected
 
+        //give some score
+        game.data.score += 250;
+
         //make sure it cannot be collected "again"
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
 
