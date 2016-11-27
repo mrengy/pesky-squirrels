@@ -106,9 +106,7 @@
  <objectgroup name="portals">
   <object id="31" name="me.levelEntity" x="1250" y="287" width="31" height="66">
    <properties>
-    <property name="duration" type="int" value="750"/>
-    <property name="fade" type="color" value="#ff000000"/>
-    <property name="to" type="file" value="area02.tmx"/>
+    <property name="to" value="area02"/>
    </properties>
   </object>
  </objectgroup>
