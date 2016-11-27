@@ -108,7 +108,7 @@
    <properties>
     <property name="duration" type="int" value="750"/>
     <property name="fade" type="color" value="#ff000000"/>
-    <property name="to" value="area02"/>
+    <property name="to" type="file" value="area02.tmx"/>
    </properties>
   </object>
  </objectgroup>
