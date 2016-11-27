@@ -39,8 +39,9 @@ var game = {
         // set the "Play/Ingame" Screen Object
         me.state.set(me.state.PLAY, new game.PlayScreen());
 
-        // register our player entity in the object pool
+        // register our object entities in the object pool
         me.pool.register("mainPlayer", game.PlayerEntity);
+        me.pool.register("CoinEntity", game.CoinEntity);
 
         // enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT, "left");
