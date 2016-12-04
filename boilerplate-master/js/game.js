@@ -36,8 +36,14 @@ var game = {
      * callback when everything is loaded
      */
     loaded : function() {
+        // set the "Menu" Screen Object
+        me.state.set(me.state.MENU, new game.TitleScreen());
+
         // set the "Play/Ingame" Screen Object
         me.state.set(me.state.PLAY, new game.PlayScreen());
+
+        // set a global fading transition for the screen
+        me.state.transition("fade", "#FFFFFF", 250);
 
         // register our object entities in the object pool
         me.pool.register("mainPlayer", game.PlayerEntity);
